@@ -1,0 +1,29 @@
+export interface Program {
+    url: string;
+    id: number;
+    status: string;
+    budget: number;
+    actuals: number;
+    difference: number;
+    level1_uuid: string;
+    unique_id: string;
+    name: string;
+    funding_status: string;
+    cost_center: string;
+    description: string;
+    public_dashboard: boolean;
+    start_date: Date;
+    end_date: Date;
+    create_date: Date;
+    edit_date: Date;
+    sort: number;
+    organization: string;
+    portfolio: any;
+    fund_code: [];
+    award: [];
+    sector: [];
+    sub_sector: [];
+    country: [];
+    milestone: [];
+    user_access: [];
+}
