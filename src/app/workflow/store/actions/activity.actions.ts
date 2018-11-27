@@ -5,6 +5,7 @@ export enum ActivityActionTypes {
   LOAD_ACTIVITIES = '[Workflow] Load Activities',
   LOAD_ACTIVITIES_SUCCESS = '[Workflow] Load Activities Success',
   LOAD_ACTIVITIES_FAIL = '[Workflow] Load Activities Fail',
+  CREATE_ACTIVITY = '[Workflow] Create Activity',
 }
 
 export class LoadActivities implements Action {
@@ -20,4 +21,9 @@ export class LoadActivitiesFail implements Action {
   constructor(public payload: string) {}
 }
 
-export type Action = LoadActivities | LoadActivitiesSuccess | LoadActivitiesFail;
+export class CreateActivity implements Action {
+  readonly type = ActivityActionTypes.CREATE_ACTIVITY;
+  constructor(public payload: Activity) { }
+}
+
+export type Action = LoadActivities | LoadActivitiesSuccess | LoadActivitiesFail | CreateActivity;

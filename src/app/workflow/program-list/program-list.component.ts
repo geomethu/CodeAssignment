@@ -1,5 +1,7 @@
 import { Program } from './../models/program.model';
 import { Component, OnInit, Input } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
 
 @Component({
   selector: 'app-program-list',
@@ -8,7 +10,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProgramListComponent implements OnInit {
   @Input() programs: Program[];
-  constructor() {}
+  activities$: Observable<any>;
+  constructor(private store: Store<any>) {}
 
   ngOnInit() {}
+
+  loadActivities() {
+    this.activities$ = this.store.pipe(select(selectActivitiesByProgramId))
+  }
 }
+
+

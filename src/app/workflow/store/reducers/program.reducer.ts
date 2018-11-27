@@ -61,3 +61,4 @@ export const {
 
 export const getProgramsLoaded = (state: ProgramState) => state.loaded;
 export const getProgramsLoading = (state: ProgramState) => state.loading;
+export const getProgramsLoadingError = (state: ProgramState) => state.error;

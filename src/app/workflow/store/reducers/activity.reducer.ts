@@ -50,6 +50,10 @@ export function activityReducer(state = initialState, action: activityActions.Ac
             };
         }
 
+        case activityActions.ActivityActionTypes.CREATE_ACTIVITY: {
+            return activityAdapter.addOne(action.payload, state);
+        }
+
     }
 }
 

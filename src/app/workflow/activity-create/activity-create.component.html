@@ -1,0 +1,15 @@
+<p>
+  Create Activity
+</p>
+
+<form [formGroup]="activityForm" (ngSubmit)="createActivity(activityForm.value, activityForm.valid)" novalidate>
+  <label>Name</label>
+  <input type="text" formControlName="name">
+
+<label>Start Date</label>
+<input type="text" formControlName="startdate">
+<label>End Date</label>
+<input type="text" formControlName="enddate">
+
+<button type="submit">Submit</button>
+</form>

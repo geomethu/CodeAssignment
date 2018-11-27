@@ -24,3 +24,7 @@ export const selectTotalPrograms = createSelector(
     getProgramState,
     fromProgram.selectTotal
 );
+export const selectProgramsLoadingError = createSelector(
+  getProgramState,
+  fromProgram.getProgramsLoadingError
+);

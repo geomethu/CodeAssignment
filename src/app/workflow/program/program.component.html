@@ -1,1 +1,11 @@
-<app-program-list [programs]="programs$ | async"></app-program-list>
+<div id="container">
+    <div id="program-section">
+        <h2>Program Section</h2>
+            <app-program-list [programs]="programs$ | async"></app-program-list>
+    </div>
+
+    <div id="activity-section">
+        <h2>Activity Section</h2>
+    </div>
+</div>
+

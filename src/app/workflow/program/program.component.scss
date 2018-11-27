@@ -1,0 +1,19 @@
+#container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 60% 40%;
+
+}
+#program-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+#activity-section {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid gray;
+  padding: 0.5em;
+}
+

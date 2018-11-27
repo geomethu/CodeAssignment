@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let item of (Activities | async)">
+    {{item.name}} {{item.startdate}} - {{item.enddate}}
+  </li>
+</ul>

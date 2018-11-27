@@ -9,19 +9,23 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProgramComponent } from './program/program.component';
 import { ProgramListComponent } from './program-list/program-list.component';
+import { ActivityComponent } from './activity/activity.component';
+import { ActivityCreateComponent } from './activity-create/activity-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
   { path: '', component: ProgramComponent }
 ];
 @NgModule({
-  declarations: [ProgramListComponent],
+  declarations: [ProgramComponent, ProgramListComponent, ActivityComponent, ActivityCreateComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature('workflow', reducers),
     EffectsModule.forFeature([WorkflowEffect]),
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   exports: [RouterModule]
 })
