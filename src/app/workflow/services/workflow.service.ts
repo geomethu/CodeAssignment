@@ -8,6 +8,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WorkflowService {
 
+  private url = 'https://dev-api.toladata.io/api/';
 
+  constructor(private _http: HttpClient) {}
+
+  getPrograms(): Observable<any> {
+    return this._http.get(`${this.url}workflowlevel1/`)
+  }
+  getActivities(): Observable<any> {
+    return this._http.get(`${this.url}workflowlevel2/`)
+  }
 
 }
