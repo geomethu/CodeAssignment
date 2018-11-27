@@ -5,15 +5,24 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { WorkflowEffect } from './store/effects/workflow.effects';
 import { reducers } from './store';
-import { ProgramComponent } from './program/program.component';
+import { Routes, RouterModule } from '@angular/router';
 
+import { ProgramComponent } from './program/program.component';
+import { ProgramListComponent } from './program-list/program-list.component';
+
+
+const routes: Routes = [
+  { path: '', component: ProgramComponent }
+];
 @NgModule({
-  declarations: [ProgramComponent],
+  declarations: [ProgramListComponent],
   imports: [
     CommonModule,
+    RouterModule.forChild(routes),
     StoreModule.forFeature('workflow', reducers),
     EffectsModule.forFeature([WorkflowEffect]),
     HttpClientModule,
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class WorkflowModule { }
