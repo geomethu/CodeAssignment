@@ -5,9 +5,10 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { WorkflowEffect } from './store/effects/workflow.effects';
 import { reducers } from './store';
+import { ProgramComponent } from './program/program.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [ProgramComponent],
   imports: [
     CommonModule,
     StoreModule.forFeature('workflow', reducers),
